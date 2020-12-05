@@ -8,7 +8,8 @@ module.exports = {
     connect: function(){
         if(this.connection) return this.connection;
         //if the connection is null
-        return mongoose.connect(app_config.DB).then(connection =>{
+        return mongoose.connect(app_config.DB,{useNewUrlParser: true,
+        useUnifiedTopology: true }).then(connection =>{
             //a connection is assigned
             this.connection = connection;
             console.log('successful connection to the database');
