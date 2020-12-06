@@ -8,6 +8,7 @@ const config = require('../config/config');
 function login(req,res) {
     let username = req.body.username;
     let password = req.body.password;
+    let role = req.body.role;
     //find user by username
     User.findOne({username: username})
     .then(user =>{
@@ -16,9 +17,11 @@ function login(req,res) {
         bcrypt.compare(password,user.password)
             .then(match =>{
                 //implements json web tokens
-                if(match){
+                if(match ){
                     payload = {
-                        username: user.username
+                        username: user.username,
+                        name: user.name,
+                        role: user.role
                        }
                    //sucessful login 
                    //payload and secret or private key - token generation
@@ -29,7 +32,8 @@ function login(req,res) {
                          res.status(200).send({message: 'Acceso',token});
                     }
                    })
-                }
+                
+            }
                 else{
                     //access denied
                     res.status(200).send({message: "Password incorrect"});
