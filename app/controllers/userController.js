@@ -11,8 +11,14 @@ function index(req,res) {
         //if the search generates an error, a response with status 500 is sent, internal server error
     }).catch(error => res.status(500).send({error}));
 }
+
+//create new user
 function create(req,res) {
-    new User(req.body).save().then(new_user => res.status(201).send({new_user}))
+
+    //create user instance
+    new User(req.body)
+    //save user on database
+    .save().then(new_user => res.status(201).send({new_user}))
     .catch(error => res.status(500).send({error}));
 }
 
