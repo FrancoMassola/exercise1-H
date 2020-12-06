@@ -1,0 +1,71 @@
+[33mcommit 357733f8e5314c02ef359e11b77bd017d60fb68c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: [FrancoMassola] <frann.massola@gmail.com>
+Date:   Sun Dec 6 12:34:40 2020 -0300
+
+    add authentication controller and json web token
+
+[33mcommit e8f8f7e92afc23fdd6452c1fcad2cb6280774079[m
+Author: [FrancoMassola] <frann.massola@gmail.com>
+Date:   Sat Dec 5 22:25:26 2020 -0300
+
+    add bcrypt module for user password encryption
+
+[33mcommit 008860e5e41aee398e1f5697af1aba6e65cc1c9e[m
+Author: [FrancoMassola] <frann.massola@gmail.com>
+Date:   Sat Dec 5 21:01:04 2020 -0300
+
+    modified data schema
+
+[33mcommit 1dd6d73e715ba0b95ef43e04988fb2171ff9f218[m
+Author: [FrancoMassola] <frann.massola@gmail.com>
+Date:   Sat Dec 5 20:49:05 2020 -0300
+
+    add controller functions
+
+[33mcommit 6247cc159f1202796f70ce718d066b828404b294[m
+Author: [FrancoMassola] <frann.massola@gmail.com>
+Date:   Sat Dec 5 16:39:28 2020 -0300
+
+    add get route and user controller
+
+[33mcommit 20acf4b67d5003b236ccef3da7032fd98e49c0f4[m
+Author: [FrancoMassola] <frann.massola@gmail.com>
+Date:   Sat Dec 5 16:05:01 2020 -0300
+
+    create User schema
+
+[33mcommit c659febfb503fad1b396b3ef2d251ae567cd9719[m
+Author: [FrancoMassola] <frann.massola@gmail.com>
+Date:   Sat Dec 5 15:44:43 2020 -0300
+
+    successful database connection
+
+[33mcommit 59e82ccb73621f0c96a4052c8a9d41fddebd7dee[m
+Author: [FrancoMassola] <frann.massola@gmail.com>
+Date:   Sat Dec 5 14:11:52 2020 -0300
+
+    add database connection settings
+
+[33mcommit 994b0e23d89b79d7464d7b4c1100d9598717476b[m
+Author: [FrancoMassola] <frann.massola@gmail.com>
+Date:   Sat Dec 5 13:56:21 2020 -0300
+
+    add first configuration data
+
+[33mcommit eabc26140405075427829fdfd3fecef79a31a3c8[m
+Author: [FrancoMassola] <frann.massola@gmail.com>
+Date:   Sat Dec 5 13:49:31 2020 -0300
+
+    add body-parser configuration
+
+[33mcommit 4653b25342a855401476e2462c0247a406001df0[m
+Author: [FrancoMassola] <frann.massola@gmail.com>
+Date:   Sat Dec 5 13:40:13 2020 -0300
+
+    add MVC structure
+
+[33mcommit f349cd7fbe503ff3cefa82bb5aa77421cf3395e3[m
+Author: [FrancoMassola] <frann.massola@gmail.com>
+Date:   Sat Dec 5 13:31:55 2020 -0300
+
+    first commit add modules

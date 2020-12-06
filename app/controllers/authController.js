@@ -1,7 +1,10 @@
 const User = require('../models/user');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const config = require('../config/config');
 
-//pass name and password as parameters
+//user authentication
+//req name and password in body
 function login(req,res) {
     let username = req.body.username;
     let password = req.body.password;
@@ -9,11 +12,29 @@ function login(req,res) {
     User.findOne({username: username})
     .then(user =>{
         if(!user) return res.status(404).send({message: `El usuario no existe`});
-        
+        //password compare
         bcrypt.compare(password,user.password)
             .then(match =>{
-                if(match) return res.status(200).send({message: "Acceso"});
-                return res.status(200).send({message: "Password incorrect"});
+                //implements json web tokens
+                if(match){
+                    payload = {
+                        username: user.username
+                       }
+                   //sucessful login 
+                   //payload and secret or private key - token generation
+                   jwt.sign(payload,config.Secret, function (error,token){
+                    if(error){
+                        res.status(500).send({error});
+                    }else{
+                         res.status(200).send({message: 'Acceso',token});
+                    }
+                   })
+                }
+                else{
+                    //access denied
+                    res.status(200).send({message: "Password incorrect"});
+                }
+                
 
             }).catch(error =>{res.status(500).send({error});
         
