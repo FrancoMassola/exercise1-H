@@ -14,6 +14,11 @@ const UserSchema = new Schema({
         unique: true,
         required: true
     },
+    username: {
+        type: String,
+        unique: true,
+        required: true
+    },
     password: {
         type: String,
         unique: true,
@@ -21,7 +26,7 @@ const UserSchema = new Schema({
     },
 });
 
-//execute action before a specific method
+//execute action before a specific method on userController
 UserSchema.pre('save',function(next){
     //the password is hashed
     bcrypt.genSalt(10).then(salts =>{
