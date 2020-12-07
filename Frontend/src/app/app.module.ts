@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { SingupComponent } from './components/singup/singup.component';
 import { SinginComponent } from './components/singin/singin.component';
 import { ListComponent } from './components/list/list.component';
+//import the class Guard
+import {AuthGuard} from '../app/auth.guard' 
 
 @NgModule({
   declarations: [
@@ -23,7 +25,10 @@ import { ListComponent } from './components/list/list.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  //guard class is used in providers
+  providers: [
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,14 +11,12 @@ import {Router} from '@angular/router'
   providedIn: 'root'
 })
 
-
+//AuthGuard is the way to protect routes on the Frontend
 export class AuthGuard implements CanActivate {
  
   //generate the constructor and instantiate the service
 constructor(private authService: AuthService, 
-            private router: Router ){
-
-}
+            private router: Router ){}
   
   canActivate(): boolean{
     //If the token exists in the localstorage return true
@@ -26,7 +24,7 @@ constructor(private authService: AuthService,
       return true;
     }
     //otherwise is redirected to the login 
-    this.router.navigate('/auth/login');
+    this.router.navigate(['/auth/login']);
     return false;
   }
   
