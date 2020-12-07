@@ -18,6 +18,7 @@ export class SinginComponent implements OnInit {
   }
 
   singIn(){
+    console.log(this.admin);
     
   }
 
