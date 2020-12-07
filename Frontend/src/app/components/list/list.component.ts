@@ -9,7 +9,7 @@ import {UsersService} from '../../services/users.service'
 })
 export class ListComponent implements OnInit {
 
-  userList = [];
+  users = [];
 
   constructor(private usersService: UsersService) { }
 
@@ -18,7 +18,7 @@ export class ListComponent implements OnInit {
     .subscribe(
       res =>{
         console.log(res);
-        this.userList = res;
+        this.users = res;
       },
       err => console.log(err)
       
