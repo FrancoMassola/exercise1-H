@@ -24,6 +24,8 @@ export class SinginComponent implements OnInit {
     .subscribe(
       res =>{
         console.log(res)
+        //add token to localstorage
+        localStorage.setItem('token',res.token);
         
       },
         err => console.log(err)
