@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 //import the service class
 import {AuthService} from '../../services/auth.service'
+//Import Router module
+import{Router} from '@angular/router'
+
+
 @Component({
   selector: 'app-singin',
   templateUrl: './singin.component.html',
@@ -13,7 +17,9 @@ export class SinginComponent implements OnInit {
     password: ''
   }
 //generate the instance of the class
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,
+              private router: Router      
+    ) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +32,8 @@ export class SinginComponent implements OnInit {
         console.log(res)
         //add token to localstorage
         localStorage.setItem('token',res.token);
-        
+        //redirect to 
+        this.router.navigate(['/users']);
       },
         err => console.log(err)
       
