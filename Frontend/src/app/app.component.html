@@ -9,17 +9,20 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <!-- add router links to redirectionated -->
+        <a class="nav-link" routerLink="/auth/login" routerLinkActive="active">Sing in</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" routerLink="/users" routerLinkActive="active">List users</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
       </li>
     </ul>
   </div>
-
-
+</nav>
 <!-- router -->
-<router-outlet></router-outlet>
+<!-- class to centrate the content -->
+<div class="container p-5">
+  <router-outlet></router-outlet>
+</div>

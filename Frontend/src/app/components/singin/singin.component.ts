@@ -12,4 +12,8 @@ export class SinginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  singIn(){
+    
+  }
+
 }
