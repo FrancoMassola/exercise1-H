@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
+//import router
+import {Router} from '@angular/router'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -8,7 +11,7 @@ export class AuthService {
 //connect Front to Backend
 private URL = 'http://localhost:3000/'
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
   //make the request to the server
   singIn(admin){
     //send the admin object through the post method to the backend
@@ -26,6 +29,12 @@ private URL = 'http://localhost:3000/'
     //method to obtain the token
     getToken() {
       return localStorage.getItem('token');
+    }
+
+    //implements admin logout -- delete token
+    logout() {
+      localStorage.removeItem('token');
+      this.router.navigate(['auth/login']);
     }
 
   }

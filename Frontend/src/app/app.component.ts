@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+//import the authService service to use it in the view
+import {AuthService} from '../app/services/auth.service'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Frontend';
+  title = 'Frontend'
+ constructor(public authService: AuthService){
+
+ }
 }
