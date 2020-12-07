@@ -18,7 +18,8 @@ export class ListComponent implements OnInit {
     .subscribe(
       res =>{
         console.log(res);
-        this.users = res;
+        //access the users array of the response json object
+        this.users = res["users"];
       },
       err => console.log(err)
       

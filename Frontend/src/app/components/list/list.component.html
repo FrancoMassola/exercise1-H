@@ -1,6 +1,23 @@
-<ul class="list-group">
-    <!-- implements *ngFor to iterate users -->
-<li class="list-group-item list-group-item-dark" *ngFor="let users of users">
-</li>
 
-</ul>
+<!-- implements *ngFor to iterate users -->
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Username</th>
+        <th scope="col">Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <th scope="col"> </th>
+        <th scope="col">{{user.name}}</th>
+        <th scope="col">{{user.username}}</th>
+        <th scope="col">{{user.role}}</th>
+
+      </tr>
+      
+     
+    </tbody>
+  </table>
