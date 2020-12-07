@@ -18,8 +18,15 @@ private URL = 'http://localhost:3000/'
   //method to verify that the user is logged in
   loggedIn(){
     //if the local storage contains the token
-    if(localStorage.getItem('token')){
+    //return true or false
+    return !!localStorage.getItem('token');
 
     }
+
+    //method to obtain the token
+    getToken() {
+      return localStorage.getItem('token');
+    }
+
   }
-}
+
