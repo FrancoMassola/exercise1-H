@@ -30,10 +30,17 @@ export class SinginComponent implements OnInit {
     .subscribe(
       res =>{
         console.log(res)
-        //add token to localstorage
+        //validate navigation respect to the admin data
+        if (res.token == undefined){
+          this.router.navigate(['/users']);
+        }
+        else{
+          //add token to localstorage
         localStorage.setItem('token',res.token);
         //redirect to 
         this.router.navigate(['/users']);
+        }
+        
       },
         err => console.log(err)
       
