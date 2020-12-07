@@ -14,4 +14,12 @@ private URL = 'http://localhost:3000/'
     //send the admin object through the post method to the backend
     return this.http.post<any>(this.URL + 'auth/login', admin);
   }
+
+  //method to verify that the user is logged in
+  loggedIn(){
+    //if the local storage contains the token
+    if(localStorage.getItem('token')){
+
+    }
+  }
 }
