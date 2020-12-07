@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+//import the service class
+import {AuthService} from '../../services/auth.service'
 @Component({
   selector: 'app-singin',
   templateUrl: './singin.component.html',
@@ -11,14 +12,23 @@ export class SinginComponent implements OnInit {
     username: '',
     password: ''
   }
-
-  constructor() { }
+//generate the instance of the class
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
   singIn(){
-    console.log(this.admin);
+    //admin object is sent to service
+    this.authService.singIn(this.admin)
+    .subscribe(
+      res =>{
+        console.log(res)
+        
+      },
+        err => console.log(err)
+      
+    )
     
   }
 

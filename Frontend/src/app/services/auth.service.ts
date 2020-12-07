@@ -10,7 +10,7 @@ private URL = 'http://localhost:3000/'
 
   constructor(private http: HttpClient) { }
   //make the request to the server
-  singUp(admin){
+  singIn(admin){
     //send the admin object through the post method
     return this.http.post<any>(this.URL + 'auth/login', admin);
   }
