@@ -23,7 +23,7 @@ async function login(req, res) {
             payload = {
               username: user.username,
               name: user.name,
-              role: user.role,
+              role: user.role
             };
             //sucessful login
             //payload and secret or private key - token generation

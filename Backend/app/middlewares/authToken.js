@@ -12,7 +12,7 @@ module.exports = function (req, res, next) {
       //decoded = token payload
       jwt.verify(token, config.Secret, function (error, decoded) {
         if (error) return res.status(403).send({ message: "Invalid token" });
-        if (req.method == "GET" || req.method == "POST") {
+        if (req.method == "GET") {
           if (decoded.role == "admin") {
             //in case of being an administrator permission is given to add and consult users
           } else
@@ -22,6 +22,11 @@ module.exports = function (req, res, next) {
         }
       });
       next();
-    } else res.status(403).send({ message: "You don't have permissions" });
+    } else if (req.method == "POST"){
+      next();
+    }
+    else{
+      res.status(403).send({ message: "You don't have permissions" });
+    } 
   } else next();
 };
