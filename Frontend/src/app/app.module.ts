@@ -10,7 +10,6 @@ import {
 } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SingupComponent } from './components/singup/singup.component';
 import { SinginComponent } from './components/singin/singin.component';
 import { ListComponent } from './components/list/list.component';
 //import this module for pagination
@@ -22,7 +21,7 @@ import { AuthGuard } from '../app/auth.guard';
 import { TokenInterceptorService } from '../app/services/token-interceptor.service';
 
 @NgModule({
-  declarations: [AppComponent, SingupComponent, SinginComponent, ListComponent],
+  declarations: [AppComponent, SinginComponent, ListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
