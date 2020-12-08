@@ -8,9 +8,8 @@ describe('SinginComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SinginComponent ]
-    })
-    .compileComponents();
+      declarations: [SinginComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

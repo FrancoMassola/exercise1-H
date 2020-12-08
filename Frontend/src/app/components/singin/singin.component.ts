@@ -24,7 +24,7 @@ export class SinginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  singIn(){
+  async singIn(){
     //admin object is sent to service
     this.authService.singIn(this.admin)
     .subscribe(
