@@ -13,7 +13,7 @@ async function login(req, res) {
   await User.findOne({ username: username })
     .then((user) => {
       if (!user)
-        return res.status(403 ).send({ message: `El usuario no existe` });
+        return res.status(403 ).send({ message: `The user don´t exist` });
       //password compare
       bcrypt
         .compare(password, user.password)
@@ -31,10 +31,12 @@ async function login(req, res) {
               if (error) {
                 res.status(500).send({ error });
               } else if (payload.role == 'admin') {
-                res.status(200).send({ message: "successful access", token });
+                res.status(200).send({ message: "Successful access", token });
               }
               else{
+                
                 res.status(401).send({ message: "Only the admin users have access" });
+                
               }
             })
           } else {
