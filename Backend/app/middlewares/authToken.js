@@ -22,11 +22,10 @@ module.exports = function (req, res, next) {
         }
       });
       next();
-    } else if (req.method == "POST"){
+    } else if (req.method == "POST") {
       next();
-    }
-    else{
+    } else {
       res.status(403).send({ message: "You don't have permissions" });
-    } 
+    }
   } else next();
 };
