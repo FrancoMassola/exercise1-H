@@ -9,13 +9,13 @@ import {Router} from '@angular/router'
 export class AuthService {
 //use Http property to request data
 //connect Front to Backend
-private URL = 'http://localhost:3000/'
+private URL = 'http://localhost:3000/api'
 
   constructor(private http: HttpClient, private router: Router) { }
   //make the request to the server
   singIn(admin){
     //send the admin object through the post method to the backend
-    return this.http.post<any>(this.URL + 'auth/login', admin);
+    return this.http.post<any>(this.URL + '/auth/login', admin);
   }
 
   //method to verify that the user is logged in

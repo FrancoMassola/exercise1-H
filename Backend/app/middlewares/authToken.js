@@ -3,7 +3,7 @@ const config = require("../config/config");
 
 //check token and permissions
 module.exports = function (req, res, next) {
-  if (req.path != "/auth/login") {
+  if (req.path != "/api/auth/login") {
     //header Authorization Bearer "token" -- only for admin
     //token validation
     if (req.headers.authorization) {

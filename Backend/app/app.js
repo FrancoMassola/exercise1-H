@@ -20,8 +20,8 @@ App.use(bodyParser.urlencoded({ extended: false }));
 App.use(authToken);
 
 //Routes
-App.use("/users", userRoutes);
-App.use("/auth", authRoute);
+App.use("/api/users", userRoutes);
+App.use("/api/auth", authRoute);
 
 //export app to use in server
 module.exports = App;

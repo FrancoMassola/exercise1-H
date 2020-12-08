@@ -42,7 +42,7 @@ export class SinginComponent implements OnInit {
         }
         
       },
-        err => console.log(err)
+        err => console.log(err.error["message"])
       
     )
     

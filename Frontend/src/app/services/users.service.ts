@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http'
 export class UsersService {
 
   //use Http property to request data
-  private URL = 'http://localhost:3000/users'
+  private URL = 'http://localhost:3000/api/users'
   constructor(private http: HttpClient) { }
 
   //declare method to make the request
