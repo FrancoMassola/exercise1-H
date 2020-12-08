@@ -12,6 +12,9 @@ export class ListComponent implements OnInit {
   users = [];
 
   constructor(private usersService: UsersService) { }
+ 
+  //implement pagination - p = currentPage
+  p: number= 1;
 
   ngOnInit(): void {
     this.usersService.getUsers()

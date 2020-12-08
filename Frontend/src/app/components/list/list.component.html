@@ -10,14 +10,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users">
-        <th scope="col"> </th>
+      <!-- implement pagination whit ngx-pagination module -->
+      <tr *ngFor="let user of users | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+        <th scope="col">{{i+1}}</th>
         <th scope="col">{{user.name}}</th>
         <th scope="col">{{user.username}}</th>
         <th scope="col">{{user.role}}</th>
 
       </tr>
-      
      
     </tbody>
   </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>

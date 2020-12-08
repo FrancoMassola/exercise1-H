@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { SingupComponent } from './components/singup/singup.component';
 import { SinginComponent } from './components/singin/singin.component';
 import { ListComponent } from './components/list/list.component';
+//import this module for pagination
+import {NgxPaginationModule} from 'ngx-pagination';
 //import the class Guard
 import {AuthGuard} from '../app/auth.guard' 
 
@@ -26,7 +28,8 @@ import {TokenInterceptorService} from '../app/services/token-interceptor.service
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   //guard class is used in providers
   providers: [
