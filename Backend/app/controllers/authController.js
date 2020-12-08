@@ -5,12 +5,12 @@ const config = require("../config/config");
 
 //user authentication
 //req name and password in body
-function login(req, res) {
+async function login(req, res) {
   let username = req.body.username;
   let password = req.body.password;
   let role = req.body.role;
   //find user by username
-  User.findOne({ username: username })
+  await User.findOne({ username: username })
     .then((user) => {
       if (!user)
         return res.status(403 ).send({ message: `El usuario no existe` });

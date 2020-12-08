@@ -1,8 +1,8 @@
 const User = require("../models/user");
 
 //list users
-function index(req, res) {
-  User.find({})
+async function index(req, res) {
+  await User.find({})
     .then((users) => {
       //if some users exist, return response to the client with users json and server status  200
       if (users.length) return res.status(200).send({ users });
@@ -14,9 +14,9 @@ function index(req, res) {
 }
 
 //create new user
-function create(req, res) {
+async function create(req, res) {
   //create user instance
-  new User(req.body)
+  await new User(req.body)
     //save user on database
     .save()
     .then((new_user) => res.status(201).send({ new_user }))
