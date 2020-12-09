@@ -21,6 +21,7 @@ token que solo se genera cuando un usuario admin inicia sesión.
 
    Por medio del siguiente endpoint http://localhost:3000/api/users, se envía un objeto json por body el cual contendrá los datos del nuevo usuario a registrar en la base de datos.
 
+```
 Ejemplo (añadir usuario administrador): 
 
 {
@@ -29,7 +30,9 @@ Ejemplo (añadir usuario administrador):
   "password": "admin123",
   "rol": "admin"
 }
+```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+```
 Ejemplo (añadir usuario regular): 
 
    Al no especificar el rol por defecto se registra como usuario regular.
@@ -40,30 +43,32 @@ Ejemplo (añadir usuario regular):
   "password": "user123"
 } 
 
+```
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ###Paso 2: Login de usuarios
 
 >Método POST:
 
    Por medio del siguiente endpoint http://localhost:3000/api/auth/login, se envía un objeto json por body el cual contendrá los datos para el inicio de sesión de los usuarios administradores.
-
+```
 Ejemplo (inicio de sesión por parte de un usuario administrador): 
 
 {
   "username": "Admin01",
   "password": "admin123"
 }
-
+```
    Una vez enviados estos datos, si este usuario admin existiera en la base de datos, el servidor responde con un mensaje de que el acceso fue correcto, y envía un token. Si este usuario
 no existiese el mensaje indicaría que el usuario no existe, o si su contraseña es incorrecta también estaría especificado en el mensaje y no se obtendría el token.
-
+```
 Ejemplo (inicio de sesión por parte de un usuario regular):
 
  {
   "username": "User01",
   "password": "user123"
  }
-
+```
 Una vez enviados estos datos, si este usuario existiera en la base de datos, el servidor responde con un mensaje de que este usuario regular no tiene los permisos para iniciar sesión y no se entrega un token.
 Si no existiese en la base de datos estaría especificado en el mensaje que devuelve el servidor, o si se ingresara una constraseña incorrecta tabién estaría especificado, y no se obtendría nunca el token para este tito de usuarios regulares.
 
@@ -75,11 +80,11 @@ Si no existiese en la base de datos estaría especificado en el mensaje que devu
 
  Por medio del siguiente endpoint http://localhost:3000/api/users, y especificando en el header: una KEY Authorization con su VALUE Bearer (token). Se obtendrá como respuesta del servidor
 un objeto json con todos los usuarios registrados en la base de datos.
-
+```
 Ejemplo de especificación del header.
 
 KEY: Authorization     VALUE: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkZyYW5jb01hc3NvbGEiLCJuYW1lIjoiRnJhbmNvIE1hc3NvbGEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MDc0NjcxNzl9.TNk_w5KhODHpReAkS3vbr6Fv706-Vc4LXt3bWB1sorU         
-
+```
  
  
  
