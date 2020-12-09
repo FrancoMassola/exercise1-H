@@ -2,7 +2,7 @@
 
 # Introdución
 
-  A través de la API lista de usuarios, se puede realizar el registro de usuarios (no se requiere ningún tipo de autorización para realizar esta operación).   
+  A través de la API esta API se pueden realizar registros de usuarios (no se requiere ningún tipo de autorización para realizar esta operación).   
 Cada usuario cuenta con un campo "name": para indicar su nombre, "username": para indicar el nombre de su usuario, "password": para su contraseña y "rol": el cual 
 indica el rol específico de ese usuario, este puede ser "admin" o por defecto "regular".
 
