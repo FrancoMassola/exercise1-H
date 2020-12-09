@@ -62,7 +62,7 @@ Ejemplo (inicio de sesión por parte de un usuario regular):
  {
   "username": "User01",
   "password": "user123"
-}
+ }
 
 Una vez enviados estos datos, si este usuario existiera en la base de datos, el servidor responde con un mensaje de que este usuario regular no tiene los permisos para iniciar sesión y no se entrega un token.
 Si no existiese en la base de datos estaría especificado en el mensaje que devuelve el servidor, o si se ingresara una constraseña incorrecta tabién estaría especificado, y no se obtendría nunca el token para este tito de usuarios regulares.
