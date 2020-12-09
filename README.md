@@ -24,7 +24,7 @@ token que solo se genera cuando un usuario admin inicia sesión.
 
 >Método POST:
 
-   Por medio del siguiente endpoint http://localhost:3000/api/users, se envía un objeto json por body el cual contendrá los datos del nuevo usuario a registrar en la base de datos.
+   Por medio de este método se realiza la petición al siguiente endpoint http://localhost:3000/api/users y se envia un objeto json por body el cual contendrá los datos del nuevo usuario a registrar en la base de datos.
 
 ```
 Ejemplo (añadir usuario administrador): 
@@ -55,7 +55,7 @@ Ejemplo (añadir usuario regular):
 
 >Método POST:
 
-   Por medio del siguiente endpoint http://localhost:3000/api/auth/login, se envía un objeto json por body el cual contendrá los datos para el inicio de sesión de los usuarios administradores.
+   Por medio de este método se realiza la petición al siguiente endpoint http://localhost:3000/api/auth/login y se envía un objeto json por body el cual contendrá los datos para el inicio de sesión de los usuarios administradores.
 ```
 Ejemplo (inicio de sesión por parte de un usuario administrador): 
 
@@ -64,8 +64,7 @@ Ejemplo (inicio de sesión por parte de un usuario administrador):
   "password": "admin123"
 }
 ```
-   Una vez enviados estos datos, si este usuario admin existiera en la base de datos, el servidor responde con un mensaje de que el acceso fue correcto, y envía un token. Si este usuario
-no existiese el mensaje indicaría que el usuario no existe, o si su contraseña es incorrecta también estaría especificado en el mensaje y no se obtendría el token.
+   Una vez enviados estos datos, si este usuario admin existiese en la base de datos, el servidor responde con un mensaje de que el acceso fue correcto, y envía un token. Si este usuario no existiese el mensaje indicaría que el usuario no existe, o si su contraseña es incorrecta también estaría especificado en el mensaje y no se obtendría el token.
 ```
 Ejemplo (inicio de sesión por parte de un usuario regular):
 
@@ -83,8 +82,7 @@ Si no existiese en la base de datos estaría especificado en el mensaje que devu
 
 >Método GET:
 
- Por medio del siguiente endpoint http://localhost:3000/api/users, y especificando en el header: una KEY Authorization con su VALUE Bearer (token). Se obtendrá como respuesta del servidor
-un objeto json con todos los usuarios registrados en la base de datos.
+ Por medio de este método se realiza la petición al siguiente endpoint http://localhost:3000/api/users, y especificando en el header: una KEY Authorization con su VALUE Bearer (token). Se obtendrá como respuesta del servidor un objeto json con todos los usuarios registrados en la base de datos.
 ```
 Ejemplo de especificación del header.
 
