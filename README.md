@@ -12,8 +12,12 @@ token que solo se genera cuando un usuario admin inicia sesión.
 ## Caso de uso
 
    Esta API solo puede ser usada para el registrar y listar usuarios.
+   
+## Ejecución ⚙️
 
-## Métodos y pasos para ejecutar la API de forma correcta
+   npm start
+
+## Métodos utilizados y pasos ejecutar peticiones
 
 ### Paso 1: Registro de usuarios
 
@@ -85,7 +89,20 @@ Ejemplo de especificación del header.
 
 KEY: Authorization     VALUE: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkZyYW5jb01hc3NvbGEiLCJuYW1lIjoiRnJhbmNvIE1hc3NvbGEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2MDc0NjcxNzl9.TNk_w5KhODHpReAkS3vbr6Fv706-Vc4LXt3bWB1sorU         
 ```
+
+## Construido con 🛠️
+
+  Backend: 
+  
+* Node.js (bcrypt, body-parser, cors, express. jsonwebtoken, mongoose, nodemon).
+
+  Frontend: 
+  
+ * Angular (ngx-pagination).
  
+ * Framework (bootstrap).
+
+
  ## Autor ✒️
  
 * **Franco Massola** 
