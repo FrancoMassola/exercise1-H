@@ -92,11 +92,11 @@ KEY: Authorization     VALUE: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2
 
 ## Construido con 🛠️
 
-  Backend: 
+Backend: 
   
 * Node.js (bcrypt, body-parser, cors, express. jsonwebtoken, mongoose, nodemon).
 
-  Frontend: 
+Frontend: 
   
  * Angular (ngx-pagination).
  
