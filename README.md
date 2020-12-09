@@ -73,7 +73,7 @@ Si no existiese en la base de datos estaría especificado en el mensaje que devu
 
 >Método GET:
 
- Por medio del siguiente endpoint http://localhost:3000/api/users, y especificando en el header con una key Authorization con su value Bearer (token). Se obtendrá como respuesta del servidor
+ Por medio del siguiente endpoint http://localhost:3000/api/users, y especificando en el header: una KEY Authorization con su VALUE Bearer (token). Se obtendrá como respuesta del servidor
 un objeto json con todos los usuarios registrados en la base de datos.
 
 Ejemplo de especificación del header.
