@@ -15,7 +15,7 @@ token que solo se genera cuando un usuario admin inicia sesión.
 
 ## Métodos y pasos para ejecutar la API de forma correcta
 
-*Paso 1: Registro de usuarios
+###Paso 1: Registro de usuarios
 
 >Método POST:
 
@@ -41,7 +41,7 @@ Ejemplo (añadir usuario regular):
 } 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-*Paso 2: Login de usuarios
+###Paso 2: Login de usuarios
 
 >Método POST:
 
@@ -69,7 +69,7 @@ Si no existiese en la base de datos estaría especificado en el mensaje que devu
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-*Paso 3: Consultar los usuarios
+###Paso 3: Consultar los usuarios
 
 >Método GET:
 
