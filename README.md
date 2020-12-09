@@ -7,7 +7,7 @@
   Cada usuario cuenta con un campo "name": para indicar su nombre, "username": para indicar el nombre de su usuario, "password": para su contraseña y "rol": el cual 
 indica el rol específico de ese usuario, este puede ser "admin" o por defecto "regular".
 
-  Además por medio de esta API se puede consultar todos los usuarios registrados en la base de datos, para que sea efectiva esta consulta debe realizarse a través de un
+  Además por medio de esta API se puede consultar todos los usuarios registrados en la base de datos .Para que sea efectiva esta consulta, debe realizarse a través de un
 token que solo se genera cuando un usuario admin inicia sesión.
 
 ## Caso de uso
@@ -18,7 +18,7 @@ token que solo se genera cuando un usuario admin inicia sesión.
 
    npm start
 
-## Métodos utilizados y pasos ejecutar peticiones
+## Métodos utilizados y pasos para ejecutar peticiones
 
 ### Paso 1: Registro de usuarios
 
@@ -82,7 +82,7 @@ Si no existiese en la base de datos estaría especificado en el mensaje que devu
 
 >Método GET:
 
- Por medio de este método se realiza la petición al siguiente endpoint http://localhost:3000/api/users, y especificando en el header: una KEY Authorization con su VALUE Bearer (token). Se obtendrá como respuesta del servidor un objeto json con todos los usuarios registrados en la base de datos.
+ Por medio de este método se realiza la petición al siguiente endpoint http://localhost:3000/api/users , especificando en el header: una KEY Authorization con su VALUE Bearer (token). Se obtendrá como respuesta del servidor un objeto json con todos los usuarios registrados en la base de datos.
 ```
 Ejemplo de especificación del header.
 
