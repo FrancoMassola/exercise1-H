@@ -100,7 +100,10 @@ Frontend:
  * Angular (ngx-pagination).
  
  * Framework (bootstrap).
+ 
+## API documentation
 
+https://documenter.getpostman.com/view/7686442/TVmTcEWt#c3b4afd3-3866-45b9-8fb8-6d09fe454590
 
  ## Autor ✒️
  
